@@ -9,7 +9,7 @@ import styles from './index.css'
 export default class App extends Component {
 
     componentDidMount() {
-        // do your XHR request here
+        // do your xhr request here (http://localhost:5000/category)
     }
 
     render() {

@@ -5,7 +5,7 @@
 
 With ReactJS, create a select control with autocomplete.
 
-* Get data in the .json file by using an XHR request
+* Get data in the file by using an XHR request http://localhost:5000/category
 * Pass the data to the component and build the select with it
 * When the user type some text the component is able to filter the result by displaying only the items that include the typing term
 * We can select an item from the select by clicking on it.
@@ -27,7 +27,7 @@ Prop | Description | Type | Default
 
 ## 1) Installation
 
-Fork this project on your Github
+Fork this project on your Github. Install and lauch the project
 
 ```
 $ git clone https://github.com/devaublanc/ifs-test-react.git
@@ -36,6 +36,14 @@ $ npm start
 ```
 
 then open http://localhost:3005/
+
+Also launch the API
+
+```
+$ npm run server
+```
+
+Now the api is running on http://localhost:5000 you can request your categories with this endpoint http://localhost:5000/category
 
 
 ## 2) Code the feature
@@ -83,7 +91,7 @@ import styles from './index.css'
 export default class App extends Component {
 
     componentDidMount() {
-        // do your xhr request here
+        // do your xhr request here (http://localhost:5000/category)
     }
 
     render() {
