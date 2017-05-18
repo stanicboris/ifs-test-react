@@ -17,7 +17,13 @@ export default class App extends Component {
         return (
             <div className={ styles.home }>
                 <h1>ifs test react</h1>
-                <SelectFilter />
+                <SelectFilter
+                    filters={[]}
+                    onChange={(currentFilter) => {
+                        console.log('currentFilter', currentFilter) // eslint-disable-line
+                    }}
+                    rootStyle={ styles.filter }
+                />
             </div>
         )
     }

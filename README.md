@@ -24,6 +24,7 @@ Prop | Description | Type | Default
 
 # Getting Started
 
+
 ## 1) Installation
 
 Fork this project on your Github
@@ -90,7 +91,13 @@ export default class App extends Component {
         return (
             <div className={ styles.home }>
                 <h1>ifs test react</h1>
-                <SelectFilter />
+                <SelectFilter
+                    filters={[]}
+                    onChange={(currentFilter) => {
+                        console.log('currentFilter', currentFilter)
+                    }}
+                    rootStyle={ styles.filter }
+                />
             </div>
         )
     }
@@ -99,4 +106,6 @@ export default class App extends Component {
 
 ## 3) Submit the feature
 
-When you have finish commit the feature on your fork and submit us the link :) Thanks !
+When you have finish commit the feature on your fork and send us the link :) Thanks !
+
+<img src="http://ljdchost.com/ODSWaAt.gif" alt="lol" width="250">
