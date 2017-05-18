@@ -8,6 +8,10 @@ import styles from './index.css'
 
 export default class App extends Component {
 
+    componentDidMount() {
+        // do your XHR request here
+    }
+
     render() {
 
         return (

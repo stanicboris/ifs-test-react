@@ -6,7 +6,7 @@ import SelectFilter from '../'
 describe('SelectFilter', function() {
 
     it('root tag is a html div tag', function() {
-        expect(shallow(<SelectFilter />).is('div')).to.equal(true)
+        expect(shallow(<SelectFilter filters={[]}/>).is('div')).to.equal(true)
     })
 
 })

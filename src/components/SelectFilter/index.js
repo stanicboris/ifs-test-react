@@ -7,6 +7,11 @@ import styles from './index.css'
 export default class SelectFilter extends Component {
 
     static propTypes = {
+        filters: PropTypes.arrayOf(PropTypes.shape({
+            name: PropTypes.string,
+            children: PropTypes.array,
+        })).isRequired,
+        onChange: PropTypes.func,
         rootStyle: PropTypes.string
     }
 
