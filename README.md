@@ -19,13 +19,10 @@ With ReactJS, create a select control with autocomplete.
 * When the user type some text the component is able to filter the result by displaying only the items that include the typing term
 * We can select an item from the select by clicking on it.
 
+# Expected Design
+<img src="https://raw.githubusercontent.com/devaublanc/ifs-test-react/master/select.png" alt="select">
+
 # Getting Started
 
 We already create the configuration Webpack for you ;)
-You have an empty component at `src/components/SelectFilter/index.js`, complete the code inside this file.
-
-The component is initialize in `src/containers/Home/index.js`
-
-
-# Expected Design
-<img src="https://raw.githubusercontent.com/devaublanc/ifs-test-react/master/select.png" alt="select">
+You have an empty component at `src/components/SelectFilter/index.js`, complete the code inside this file. The component is initialize in `src/containers/Home/index.js`
