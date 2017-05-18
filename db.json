@@ -1,0 +1,35 @@
+{
+    "category": [
+        {
+            "name": "Movies",
+            "children": [
+                {
+                    "name": "Adventure"
+                },
+                {
+                    "name": "Action"
+                },
+                {
+                    "name": "Kids"
+                },
+                {
+                    "name": "Doumentary"
+                }
+            ]
+        },
+        {
+            "name": "Tv-Shows",
+            "children": [
+                {
+                    "name": "Comedy"
+                },
+                {
+                    "name": "Thriller"
+                },
+                {
+                    "name" : "Stupid things"
+                }
+            ]
+        }
+    ]
+}
