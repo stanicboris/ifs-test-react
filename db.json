@@ -1,7 +1,7 @@
 {
     "category": [
         {
-            "name": "Movies",
+            "name": "By genre",
             "children": [
                 {
                     "name": "Adventure"
@@ -13,21 +13,21 @@
                     "name": "Kids"
                 },
                 {
-                    "name": "Doumentary"
+                    "name": "Documentary"
                 }
             ]
         },
         {
-            "name": "Tv-Shows",
+            "name": "By name",
             "children": [
                 {
-                    "name": "Comedy"
+                    "name": "Abc"
                 },
                 {
-                    "name": "Thriller"
+                    "name": "Hbo"
                 },
                 {
-                    "name" : "Stupid things"
+                    "name": "Tf1"
                 }
             ]
         }
