@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.ifeelsmart.lan:7999/volt/volt-ui.git"
+    "url": "git@github.com:devaublanc/ifs-test-react.git"
   },
   "keywords": [
     "react",
