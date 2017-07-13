@@ -3,15 +3,19 @@
 
 # Specs
 
-With ReactJS, create a select control with autocomplete.
+With ReactJS, create a select control with autocomplete **from scratch** (no extra libraries)
 
 * Get data in the file by using an XHR request http://localhost:5000/category
 * Pass the data to the component and build the select with it
-* When the user type some text the component is able to filter the result by displaying only the items that include the typing term
+* When the user type some text, the component is able to filter the result by displaying only the items that include the typing term
 * We can select an item from the select by clicking on it.
+* Please try to respect the mockup below, the CSS is also an important part ^^
 
 ## Expected Design
 <img src="https://raw.githubusercontent.com/devaublanc/ifs-test-react/master/select.png" alt="select">
+
+## Expected Result
+<img src="https://raw.githubusercontent.com/devaublanc/ifs-test-react/master/result.gif" alt="result">
 
 ## Expected props
 
