@@ -81,6 +81,7 @@ The component is initialize in `src/containers/Home/index.js`
 
 ```javascript
 import React, { Component } from 'react'
+import request from 'superagent'
 
 // import components
 import SelectFilter from 'components/SelectFilter'
@@ -92,6 +93,13 @@ export default class App extends Component {
 
     componentDidMount() {
         // do your xhr request here (http://localhost:5000/category)
+        request
+            .get('http://localhost:5000/category')
+            .end((err, res) => {
+                if (res) {
+                    console.log('res', res.body) // eslint-disable-line
+                }
+            });
     }
 
     render() {
@@ -114,6 +122,6 @@ export default class App extends Component {
 
 ## 3) Submit the feature
 
-When you have finish commit the feature on your fork and send us the link :) Thanks !
+When you have finish, commit the feature on your fork and send us the link :) Thanks !
 
 <img src="http://ljdchost.com/ODSWaAt.gif" alt="lol" width="250">
