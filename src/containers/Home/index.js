@@ -7,7 +7,7 @@ import SelectFilter from 'components/SelectFilter'
 import styles from './index.css'
 
 
-export default class App extends Component {
+export default class Home extends Component {
 
     state = {
         data: null
