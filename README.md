@@ -89,7 +89,7 @@ import SelectFilter from 'components/SelectFilter'
 import styles from './index.css'
 
 
-export default class App extends Component {
+export default class Home extends Component {
 
     componentDidMount() {
         // do your xhr request here (http://localhost:5000/category)
