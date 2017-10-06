@@ -31,8 +31,6 @@ Prop | Description | Type | Default
 
 ## 1) Installation
 
-Fork this project on your Github. Install and lauch the project
-
 ```
 $ git clone https://github.com/devaublanc/ifs-test-react.git
 $ npm i
