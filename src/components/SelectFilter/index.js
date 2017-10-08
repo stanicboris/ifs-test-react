@@ -15,15 +15,35 @@ export default class SelectFilter extends Component {
         rootStyle: PropTypes.string
     }
 
+    
+
     render() {
         const {
             rootStyle
         } = this.props;
 
+        var filters = this.props.filters.map(function(filter) {
+            var children = filter.children.map(function(children){
+                return(
+                    <li key={children.name}>
+                        <span>{children.name}</span>
+                    </li>
+                );
+            });
+            return (
+              <li key={filter.name}>
+                  <span>{filter.name}</span>
+                  <ul>{children}</ul>
+              </li>
+            );
+        });
+
         return (
             <div className={ classNames(styles.selectfilter, rootStyle)}>
-                Code your Component here
+                <p>select a channel</p>
+                <input type="text" placeholder="Search" onChange={this.filterChange}/>
+                <ul>{filters}</ul>
             </div>
-        )
+        );
     }
 }

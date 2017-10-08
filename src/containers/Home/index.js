@@ -10,7 +10,7 @@ import styles from './index.css'
 export default class Home extends Component {
 
     state = {
-        data: null
+        data: []
     }
 
     componentDidMount() {
@@ -20,7 +20,10 @@ export default class Home extends Component {
             .get('http://localhost:5000/category')
             .end((err, res) => {
                 if (res) {
-                    console.log('res', res.body) // eslint-disable-line
+                    console.log('res', res.body); // eslint-disable-line
+                    // this.state = {data : res.body};
+                    this.setState({data: res.body});
+                    // console.log('resteststate', this.state); // eslint-disable-line
                 }
             });
     }
@@ -31,7 +34,7 @@ export default class Home extends Component {
             <div className={ styles.home }>
                 <h1>ifs test react</h1>
                 <SelectFilter
-                    filters={[]}
+                    filters={this.state.data}
                     onChange={(currentFilter) => {
                         console.log('currentFilter', currentFilter) // eslint-disable-line
                     }}
