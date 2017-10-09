@@ -29,7 +29,7 @@ export default class Home extends Component {
     }
 
     render() {
-
+        console.log('this.state home', this.state);
         return (
             <div className={ styles.home }>
                 <h1>ifs test react</h1>
