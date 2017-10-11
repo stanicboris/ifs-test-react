@@ -21,15 +21,12 @@ export default class Home extends Component {
             .end((err, res) => {
                 if (res) {
                     console.log('res', res.body); // eslint-disable-line
-                    // this.state = {data : res.body};
                     this.setState({data: res.body});
-                    // console.log('resteststate', this.state); // eslint-disable-line
                 }
             });
     }
 
     render() {
-        console.log('this.state home', this.state);
         return (
             <div className={ styles.home }>
                 <h1>ifs test react</h1>
@@ -38,7 +35,6 @@ export default class Home extends Component {
                     onChange={(currentFilter) => {
                         console.log('currentFilter', currentFilter); // eslint-disable-line
                         this.setState({value: currentFilter.target.value});
-                        console.log('home:this.state',this.state);// eslint-disable-line
                     }}
                     rootStyle={ styles.filter }
                 />

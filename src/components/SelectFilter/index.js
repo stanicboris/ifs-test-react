@@ -16,8 +16,6 @@ export default class SelectFilter extends Component {
     }
 
     filterChange = (event) => {
-        console.log('filterEntry', event.target.value);
-        console.log('filterChange:this.props.filters', this.props.filters);
         var updatedList = JSON.parse(JSON.stringify( this.props.filters ));
         var filterEntry = event.target.value.toLowerCase();
         updatedList = updatedList.map(function(filter){
@@ -34,16 +32,11 @@ export default class SelectFilter extends Component {
                 return {};
             }
         });
-        console.log('updatedList',updatedList);
         this.setState({updatedData: updatedList});
     }
 
     handleClick = (event) => {
-        // console.log('event.target.value', event.target.value);
-        // event.preventDefault();
-        // event.currentTarget.submit();
         this.setState({value: event.target.value});
-        
     }
 
     
@@ -51,9 +44,6 @@ export default class SelectFilter extends Component {
         const {
             rootStyle
         } = this.props;
-        
-        console.log('render:this.props', this.props);
-        console.log('render:this.state', this.state);
         
         var displayedData;
         
@@ -64,12 +54,8 @@ export default class SelectFilter extends Component {
         else
         {
             displayedData = this.state.updatedData;
-            console.log('render:this.state.updatedData', this.state.updatedData);
         }
         
-        console.log('displayedData',displayedData);
-        
-
         var filters = displayedData.map(function(filter) {
             if (typeof(filter.name) != 'undefined')
             {
@@ -85,7 +71,7 @@ export default class SelectFilter extends Component {
                 }
                 else
                 {
-                    children = 'children_rien';
+                    return null;
                 }
 
                 return (
@@ -99,7 +85,7 @@ export default class SelectFilter extends Component {
             }
             else
             {
-                return (null);
+                return null;
             }
         });
 
