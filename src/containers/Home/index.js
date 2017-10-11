@@ -40,6 +40,7 @@ export default class Home extends Component {
                     }}
                     rootStyle={ styles.filter }
                 />
+                <p>Filter by : </p>
             </div>
         )
     }
