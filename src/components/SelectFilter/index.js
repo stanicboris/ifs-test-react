@@ -38,9 +38,13 @@ export default class SelectFilter extends Component {
         this.setState({updatedData: updatedList});
     }
 
-    // handleClick = (children) => {
-    //     this.props.currentFilter = children;
-    // }
+    handleClick = (event) => {
+        // console.log('event.target.value', event.target.value);
+        // event.preventDefault();
+        // event.currentTarget.submit();
+        this.setState({value: event.target.value});
+        
+    }
 
     
     render() {
@@ -85,10 +89,12 @@ export default class SelectFilter extends Component {
                 }
 
                 return (
-                    <select onChange={console.log('submitted')} key={filter.name}>
+                    <div className="form-group" key={filter.name}>
                         <label>{filter.name}</label>
-                        {children}
-                    </select>
+                        <select multiple className="form-control">
+                            {children}
+                        </select>
+                    </div>
                 );
             }
             else
@@ -102,7 +108,7 @@ export default class SelectFilter extends Component {
             <div className={ classNames(styles.selectfilter, rootStyle)}>
                 <p>select a channel</p>
                 <input type="text" placeholder="Search" onChange={this.filterChange}/>
-                <form>
+                <form onChange={this.props.onChange}>
                     {filters}
                 </form>
             </div>

@@ -36,11 +36,13 @@ export default class Home extends Component {
                 <SelectFilter
                     filters={this.state.data}
                     onChange={(currentFilter) => {
-                        console.log('currentFilter', currentFilter) // eslint-disable-line
+                        console.log('currentFilter', currentFilter); // eslint-disable-line
+                        this.setState({value: currentFilter.target.value});
+                        console.log('home:this.state',this.state);// eslint-disable-line
                     }}
                     rootStyle={ styles.filter }
                 />
-                <p>Filter by : </p>
+                <p>Filter by : {this.state.value}</p>
             </div>
         )
     }
