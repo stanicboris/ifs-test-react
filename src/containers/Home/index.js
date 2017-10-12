@@ -28,17 +28,23 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className={ styles.home }>
-                <h1>ifs test react</h1>
-                <SelectFilter
-                    filters={this.state.data}
-                    onChange={(currentFilter) => {
-                        console.log('currentFilter', currentFilter); // eslint-disable-line
-                        this.setState({value: currentFilter.target.value});
-                    }}
-                    rootStyle={ styles.filter }
-                />
-                <p>Filter by : {this.state.value}</p>
+            <div className="container">
+                    <h1>ifs test react</h1>
+                <div className="row">
+                    <div className="col col-lg-2">
+                        <SelectFilter
+                            filters={this.state.data}
+                            onChange={(currentFilter) => {
+                                console.log('currentFilter', currentFilter); // eslint-disable-line
+                                this.setState({value: currentFilter.target.value});
+                            }}
+                            rootStyle={ styles.filter }
+                        />
+                    </div>
+                    <div className="col col-lg-2">
+                        <p>Filter by : {this.state.value}</p>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -1,5 +1,54 @@
 .selectfilter {
-  border: solid 1px var(--white);
   display: inline-block;
-  padding: 5px;
+  background-color: #1f1f1f;
+}
+
+.search {
+  margin-right: auto;
+  margin-left: auto;
+  width: 91%;
+  padding: 3px 5px 3px 5px;
+  height: auto;
+  background-color: #414141;
+  color: white;
+}
+
+.search:focus {
+  border: 1px solid #282828;
+  box-shadow: none;
+}
+
+p {
+  padding-left: 9px;
+}
+
+label {
+  margin-bottom: 11px;
+  font-size: larger;
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.select{
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  border-radius: 0px;
+}
+.select:focus {
+  border: none;
+  box-shadow: none;
+}
+
+option {
+  font-size: large;
+  padding: 4px 0px 4px 18px;
+  color: white;
+}
+option:hover {
+  background-color: #424242;
+}
+option:focus {
+  outline: 0;
+  background-color: #942926;
 }

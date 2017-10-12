@@ -46,6 +46,8 @@ export default class SelectFilter extends Component {
         } = this.props;
         
         var displayedData;
+
+        console.log(this.props);
         
         if (this.state == null || typeof(this.state.updatedData) == 'undefined')
         {
@@ -77,7 +79,7 @@ export default class SelectFilter extends Component {
                 return (
                     <div className="form-group" key={filter.name}>
                         <label>{filter.name}</label>
-                        <select multiple className="form-control">
+                        <select multiple className={'form-control ' + styles.select}>
                             {children}
                         </select>
                     </div>
@@ -92,8 +94,10 @@ export default class SelectFilter extends Component {
 
         return (
             <div className={ classNames(styles.selectfilter, rootStyle)}>
-                <p>select a channel</p>
-                <input type="text" placeholder="Search" onChange={this.filterChange}/>
+                <p className={'h6'}>select a channel</p>
+                <div className="form-group">
+                    <input className={'form-control ' + styles.search} type="text" placeholder="Search" onChange={this.filterChange}/>
+                </div>
                 <form onChange={this.props.onChange}>
                     {filters}
                 </form>
